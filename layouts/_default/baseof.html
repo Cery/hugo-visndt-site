@@ -1,5 +1,6 @@
 {{ $styles := resources.Get "css/custom.css" | minify | fingerprint }}
 <link rel="stylesheet" href="{{ $styles.Permalink }}">
+{{ partials.Include "site-scripts.html" . }}
 {{- $environment := hugo.Environment | compare.Default "production" -}}
 <body class="ma0 {{ $.Param "body_classes"  | compare.Default "avenir bg-near-white"}} {{ $environment }}">
   <div class="container">
