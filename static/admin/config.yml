@@ -1,0 +1,26 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "static/images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "posts"
+    label: "文章"
+    folder: "content/posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "标题", name: "title", widget: "string"}
+      - {label: "发布时间", name: "date", widget: "datetime"}
+      - {label: "内容", name: "body", widget: "markdown"}
+  - name: "products"
+    label: "产品"
+    folder: "content/products"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "标题", name: "title", widget: "string"}
+      - {label: "图片", name: "image", widget: "image"}
+      - {label: "描述", name: "body", widget: "markdown"} 
