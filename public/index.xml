@@ -9,27 +9,6 @@
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title></title>
-      <link>http://localhost:1313/suppliers/1231242341324/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/suppliers/1231242341324/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title></title>
-      <link>http://localhost:1313/suppliers/vsndt/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/suppliers/vsndt/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title></title>
-      <link>http://localhost:1313/suppliers/wsndt/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/suppliers/wsndt/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title></title>
       <link>http://localhost:1313/suppliers/supplier1/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/suppliers/supplier1/</guid>
@@ -40,13 +19,6 @@
       <link>http://localhost:1313/suppliers/supplier2/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/suppliers/supplier2/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>三维测量</title>
-      <link>http://localhost:1313/products/%E4%B8%89%E7%BB%B4%E6%B5%8B%E9%87%8F/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/products/%E4%B8%89%E7%BB%B4%E6%B5%8B%E9%87%8F/</guid>
       <description></description>
     </item>
     <item>
@@ -75,13 +47,6 @@
       <link>http://localhost:1313/products/product1/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/products/product1/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>高清工业视频内窥镜</title>
-      <link>http://localhost:1313/products/ws-k2020/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/products/ws-k2020/</guid>
       <description></description>
     </item>
   </channel>
