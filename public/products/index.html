@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>产品中心 - hugo-visndt-site</title>
+
+  
+  <link rel="stylesheet" href="/css/main.min.2194104855cef944110358592643bf19ae078ff41f8104f0b411cc5dd1694aa1.css">
+
+  
+  <link rel="stylesheet" href="/css/header.min.860b770488d7da0d71a59719282c2674d2016ad73fa318aaaae40b31f8db84d1.css">
+
+  
+  <link rel="stylesheet" href="/css/products.min.ae5baa9fa231f544b360bef28b3451996b687eeec3de7b3d0928796add61dfdf.css">
+
+</head>
+<body>
+  <header class="site-header">
+  <div class="container">
+    <div class="site-header-inner">
+      <div class="site-branding">
+        <a href="http://localhost:1313/" class="site-title">
+          hugo-visndt-site
+        </a>
+      </div>
+      <nav class="site-navigation">
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a href="http://localhost:1313/" class="nav-link">首页</a>
+          </li>
+          <li class="nav-item">
+            <a href="/products" class="nav-link">产品中心</a>
+          </li>
+          <li class="nav-item">
+            <a href="/suppliers" class="nav-link">供应商</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header> 
+  
+  <main class="site-main">
+    <div class="container">
+      
+<div class="products-container">
+  
+  <div class="filter-section">
+    <form id="filter-form" class="filter-form-table">
+      <div class="filter-row">
+        <div class="filter-label">产品分类</div>
+        <div class="filter-controls">
+          
+          <label><input type="checkbox" name="category" value="电子内窥镜"> 电子内窥镜</label>
+          <label><input type="checkbox" name="category" value="管道内窥镜"> 管道内窥镜</label>
+          <label><input type="checkbox" name="category" value="光学内窥镜"> 光学内窥镜</label>
+          <label><input type="checkbox" name="category" value="光纤内窥镜"> 光纤内窥镜</label>
+        </div>
+      </div>
+
+      <div class="filter-row">
+        <div class="filter-label">产品型式</div>
+        <div class="filter-controls">
+          
+          <label><input type="checkbox" name="type" value="便携式内窥镜"> 便携式内窥镜</label>
+          <label><input type="checkbox" name="type" value="台式内窥镜"> 台式内窥镜</label>
+        </div>
+      </div>
+
+      <div class="filter-row">
+        <div class="filter-label">供应商</div>
+        <div class="filter-controls">
+            <div class="supplier-filter-group">
+                <label><input type="checkbox" name="supplier_type" value="制造商"> 制造商</label>
+                <div class="supplier-names manufacturer">
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                </div>
+            </div>
+            <div class="supplier-filter-group">
+                <label><input type="checkbox" name="supplier_type" value="贸易商"> 贸易商</label>
+                 <div class="supplier-names trader">
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                </div>
+            </div>
+        </div>
+      </div>
+
+      <div class="filter-row">
+        <div class="filter-label">技术参数</div>
+        <div class="filter-controls filter-params-grid">
+          <div class="filter-group">
+            <label for="screen_size">主机屏幕</label>
+            <select name="screen_size" id="screen_size">
+              <option value="">全部</option>
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+                  <option value="5寸">5寸</option>
+                
+              
+                
+                  <option value=""></option>
+                
+              
+                
+              
+                
+                  <option value="3.5寸">3.5寸</option>
+                
+              
+                
+              
+                
+                  <option value="4.3寸">4.3寸</option>
+                
+              
+            </select>
+          </div>
+          <div class="filter-group">
+            <label for="pipeline_diameter">管线直径</label>
+            <select name="pipeline_diameter" id="pipeline_diameter">
+              <option value="">全部</option>
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+                  <option value="10mm">10mm</option>
+                
+              
+                
+                  <option value=""></option>
+                
+              
+                
+              
+                
+                  <option value="6mm">6mm</option>
+                
+              
+                
+              
+                
+                  <option value="8mm">8mm</option>
+                
+              
+            </select>
+          </div>
+          <div class="filter-group">
+            <label for="camera_resolution">摄像头像素</label>
+            <select name="camera_resolution" id="camera_resolution">
+              <option value="">全部</option>
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+                  <option value="4K">4K</option>
+                
+              
+                
+                  <option value=""></option>
+                
+              
+                
+              
+                
+                  <option value="720P">720P</option>
+                
+              
+                
+              
+                
+                  <option value="1080P">1080P</option>
+                
+              
+            </select>
+          </div>
+          <div class="filter-group">
+            <label for="view_direction">镜头视向</label>
+            <select name="view_direction" id="view_direction">
+              <option value="">全部</option>
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+                  <option value="直视">直视</option>
+                
+              
+                
+                  <option value=""></option>
+                
+              
+                
+              
+                
+                  <option value="侧视">侧视</option>
+                
+              
+                
+              
+                
+                  <option value="直视">直视</option>
+                
+              
+            </select>
+          </div>
+           <div class="filter-group">
+            <label for="light_source">光源类型</label>
+            <select name="light_source" id="light_source">
+              <option value="">全部</option>
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+                  <option value="LED">LED</option>
+                
+              
+                
+                  <option value=""></option>
+                
+              
+                
+              
+                
+                  <option value="LED">LED</option>
+                
+              
+                
+              
+                
+                  <option value="LED">LED</option>
+                
+              
+            </select>
+          </div>
+          <div class="filter-group">
+            <label for="guide_direction">镜头导向</label>
+            <select name="guide_direction" id="guide_direction">
+              <option value="">全部</option>
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+                  <option value="六向">六向</option>
+                
+              
+                
+                  <option value=""></option>
+                
+              
+                
+              
+                
+                  <option value="双向">双向</option>
+                
+              
+                
+              
+                
+                  <option value="四向">四向</option>
+                
+              
+            </select>
+          </div>
+          <div class="filter-group">
+            <label for="pipeline_material">管线材质</label>
+            <select name="pipeline_material" id="pipeline_material">
+              <option value="">全部</option>
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+                  <option value="钛合金">钛合金</option>
+                
+              
+                
+                  <option value=""></option>
+                
+              
+                
+              
+                
+                  <option value="钨钢">钨钢</option>
+                
+              
+                
+              
+                
+                  <option value="不锈钢">不锈钢</option>
+                
+              
+            </select>
+          </div>
+        </div>
+      </div>
+       <button type="submit" class="filter-button">筛选</button>
+    </form>
+  </div>
+
+  
+  <div class="product-count">
+    找到 3 个产品，显示第 1-3 个
+  </div>
+
+  
+  <div class="products-grid">
+    
+    <div class="product-card">
+      <div class="product-image">
+        <img src="https://picsum.photos/800/600" alt="专业工业内窥镜 VX-3000" onerror="this.src='https://picsum.photos/400/300'">
+      </div>
+      <div class="product-info">
+        <h3>专业工业内窥镜 VX-3000</h3>
+        <p class="model">型号：VX-3000</p>
+        <p class="series">系列：专业系列</p>
+        <p class="supplier">供应商：深圳视安特科技有限公司</p>
+        <div class="key-specs">
+          <h4>关键参数</h4>
+          <ul>
+            <li>屏幕尺寸：5寸</li>
+            <li>管线直径：10mm</li>
+            <li>摄像头分辨率：4K</li>
+            <li>视角方向：直视</li>
+            <li>导向方向：六向</li>
+          </ul>
+        </div>
+        <a href="/products/product3/" class="view-details">查看详情</a>
+      </div>
+    </div>
+    
+    <div class="product-card">
+      <div class="product-image">
+        <img src="https://picsum.photos/800/600" alt="便携式工业内窥镜 VP-2000" onerror="this.src='https://picsum.photos/400/300'">
+      </div>
+      <div class="product-info">
+        <h3>便携式工业内窥镜 VP-2000</h3>
+        <p class="model">型号：VP-2000</p>
+        <p class="series">系列：便携系列</p>
+        <p class="supplier">供应商：深圳视安特科技有限公司</p>
+        <div class="key-specs">
+          <h4>关键参数</h4>
+          <ul>
+            <li>屏幕尺寸：3.5寸</li>
+            <li>管线直径：6mm</li>
+            <li>摄像头分辨率：720P</li>
+            <li>视角方向：侧视</li>
+            <li>导向方向：双向</li>
+          </ul>
+        </div>
+        <a href="/products/product2/" class="view-details">查看详情</a>
+      </div>
+    </div>
+    
+    <div class="product-card">
+      <div class="product-image">
+        <img src="https://picsum.photos/800/600" alt="高清工业内窥镜 VH-1000" onerror="this.src='https://picsum.photos/400/300'">
+      </div>
+      <div class="product-info">
+        <h3>高清工业内窥镜 VH-1000</h3>
+        <p class="model">型号：VH-1000</p>
+        <p class="series">系列：高清系列</p>
+        <p class="supplier">供应商：深圳视安特科技有限公司</p>
+        <div class="key-specs">
+          <h4>关键参数</h4>
+          <ul>
+            <li>屏幕尺寸：4.3寸</li>
+            <li>管线直径：8mm</li>
+            <li>摄像头分辨率：1080P</li>
+            <li>视角方向：直视</li>
+            <li>导向方向：四向</li>
+          </ul>
+        </div>
+        <a href="/products/product1/" class="view-details">查看详情</a>
+      </div>
+    </div>
+    
+  </div>
+</div>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2025 hugo-visndt-site. All rights reserved.</p>
+    </div>
+  </footer>
+
+  
+  <script src="/js/products.min.448024e8e02fd237fbd92c7fbd68cb902d9e23c150e221f3f5e2430d3449058a.js"></script>
+</body>
+</html> 

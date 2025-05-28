@@ -1,13 +1,36 @@
-{{ $styles := resources.Get "css/custom.css" | minify | fingerprint }}
-<link rel="stylesheet" href="{{ $styles.Permalink }}">
-{{ partials.Include "site-scripts.html" . }}
-{{- $environment := hugo.Environment | compare.Default "production" -}}
-<body class="ma0 {{ $.Param "body_classes"  | compare.Default "avenir bg-near-white"}} {{ $environment }}">
-  <div class="container">
-    {{ block "header" . }}{{ partials.Include "site-header.html" .}}{{ end }}
-    <main class="pb7" role="main">
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} - {{ .Site.Title }}{{ end }}</title>
+
+  {{ $mainCSS := resources.Get "css/main.css" | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ $mainCSS.RelPermalink }}">
+
+  {{ $headerCSS := resources.Get "css/header.css" | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ $headerCSS.RelPermalink }}">
+
+  {{ $productsCSS := resources.Get "css/products.css" | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ $productsCSS.RelPermalink }}">
+
+</head>
+<body>
+  {{ partial "site-header.html" . }}
+  
+  <main class="site-main">
+    <div class="container">
       {{ block "main" . }}{{ end }}
-    </main>
-    {{ block "footer" . }}{{ partials.IncludeCached "site-footer.html" . }}{{ end }}
-  </div>
-</body> 
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; {{ now.Year }} {{ .Site.Title }}. All rights reserved.</p>
+    </div>
+  </footer>
+
+  {{ $productsJS := resources.Get "js/products.js" | minify | fingerprint }}
+  <script src="{{ $productsJS.RelPermalink }}"></script>
+</body>
+</html> 

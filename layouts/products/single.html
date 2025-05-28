@@ -1,0 +1,74 @@
+{{ define "main" }}
+<div class="product-detail">
+  <!-- 产品图片展示 -->
+  <div class="product-gallery">
+    <div class="main-image">
+      <img src="{{ index .Params.images 0 }}" alt="{{ .Title }}" onerror="this.src='https://picsum.photos/800/600'">
+    </div>
+    <div class="thumbnail-list">
+      {{ range .Params.images }}
+      <img src="{{ . }}" alt="产品图片" onerror="this.src='https://picsum.photos/200/150'">
+      {{ end }}
+    </div>
+  </div>
+
+  <!-- 产品信息 -->
+  <div class="product-info">
+    <h1>{{ .Title }}</h1>
+    <p>型号：{{ .Params.model }}</p>
+    <p>系列：{{ .Params.series }}</p>
+    <p>供应商：{{ .Params.supplier }}</p>
+  </div>
+
+  <!-- 关键参数 -->
+  <div class="key-specs">
+    {{ range $key, $value := .Params.key_specs }}
+    <div class="spec-item">
+      <span class="spec-label">{{ $key }}:</span>
+      <span class="spec-value">{{ $value }}</span>
+    </div>
+    {{ end }}
+  </div>
+
+  <!-- 详细信息标签页 -->
+  <div class="product-tabs">
+    <div class="tab-buttons">
+      <button class="tab-btn active" data-tab="description">详细介绍</button>
+      <button class="tab-btn" data-tab="specifications">规格参数</button>
+      <button class="tab-btn" data-tab="downloads">资料下载</button>
+    </div>
+    <div class="tab-content">
+      <div id="description" class="tab-pane active">
+        {{ .Params.description | markdownify }}
+      </div>
+      <div id="specifications" class="tab-pane">
+        {{ .Params.specifications | markdownify }}
+      </div>
+      <div id="downloads" class="tab-pane">
+        {{ range .Params.downloads }}
+        <a href="{{ .file }}" class="download-link">下载文件</a>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+
+  <!-- 相关产品推荐 -->
+  <div class="related-products">
+    <h3>相关产品推荐</h3>
+    <div class="related-products-grid">
+      {{ $currentSeries := .Params.series }}
+      {{ $currentSupplier := .Params.supplier }}
+      {{ range first 3 (where .Site.Pages "Section" "products") }}
+        {{ if and (ne .RelPermalink $.RelPermalink) (or (eq .Params.series $currentSeries) (eq .Params.supplier $currentSupplier)) }}
+          <div class="related-product-card">
+            <img src="{{ index .Params.images 0 }}" alt="{{ .Title }}" onerror="this.src='https://picsum.photos/300/200'">
+            <h4>{{ .Title }}</h4>
+            <p>{{ .Params.model }}</p>
+            <a href="{{ .RelPermalink }}">查看详情</a>
+          </div>
+        {{ end }}
+      {{ end }}
+    </div>
+  </div>
+</div>
+{{ end }} 

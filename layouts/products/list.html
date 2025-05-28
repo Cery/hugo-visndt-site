@@ -1,0 +1,171 @@
+{{ define "main" }}
+<div class="products-container">
+  <!-- 筛选区 -->
+  <div class="filter-section">
+    <form id="filter-form" class="filter-form-table">
+      <div class="filter-row">
+        <div class="filter-label">产品分类</div>
+        <div class="filter-controls">
+          <!-- Placeholder for 产品分类 checkboxes -->
+          <label><input type="checkbox" name="category" value="电子内窥镜"> 电子内窥镜</label>
+          <label><input type="checkbox" name="category" value="管道内窥镜"> 管道内窥镜</label>
+          <label><input type="checkbox" name="category" value="光学内窥镜"> 光学内窥镜</label>
+          <label><input type="checkbox" name="category" value="光纤内窥镜"> 光纤内窥镜</label>
+        </div>
+      </div>
+
+      <div class="filter-row">
+        <div class="filter-label">产品型式</div>
+        <div class="filter-controls">
+          <!-- Placeholder for 产品型式 checkboxes -->
+          <label><input type="checkbox" name="type" value="便携式内窥镜"> 便携式内窥镜</label>
+          <label><input type="checkbox" name="type" value="台式内窥镜"> 台式内窥镜</label>
+        </div>
+      </div>
+
+      <div class="filter-row">
+        <div class="filter-label">供应商</div>
+        <div class="filter-controls">
+            <div class="supplier-filter-group">
+                <label><input type="checkbox" name="supplier_type" value="制造商"> 制造商</label>
+                <div class="supplier-names manufacturer">
+                    {{ range .Site.Pages }}
+                        {{ if and (eq .Type "suppliers") (eq .Params.type "制造商") }}
+                            <label><input type="checkbox" name="supplier_name" value="{{ .Params.name }}"> {{ .Params.name }}</label>
+                        {{ end }}
+                    {{ end }}
+                </div>
+            </div>
+            <div class="supplier-filter-group">
+                <label><input type="checkbox" name="supplier_type" value="贸易商"> 贸易商</label>
+                 <div class="supplier-names trader">
+                    {{ range .Site.Pages }}
+                        {{ if and (eq .Type "suppliers") (eq .Params.type "贸易商") }}
+                            <label><input type="checkbox" name="supplier_name" value="{{ .Params.name }}"> {{ .Params.name }}</label>
+                        {{ end }}
+                    {{ end }}
+                </div>
+            </div>
+        </div>
+      </div>
+
+      <div class="filter-row">
+        <div class="filter-label">技术参数</div>
+        <div class="filter-controls filter-params-grid">
+          <div class="filter-group">
+            <label for="screen_size">主机屏幕</label>
+            <select name="screen_size" id="screen_size">
+              <option value="">全部</option>
+              {{ range .Site.Pages }}
+                {{ if eq .Type "products" }}
+                  <option value="{{ .Params.key_specs.screen_size }}">{{ .Params.key_specs.screen_size }}</option>
+                {{ end }}
+              {{ end }}
+            </select>
+          </div>
+          <div class="filter-group">
+            <label for="pipeline_diameter">管线直径</label>
+            <select name="pipeline_diameter" id="pipeline_diameter">
+              <option value="">全部</option>
+              {{ range .Site.Pages }}
+                {{ if eq .Type "products" }}
+                  <option value="{{ .Params.key_specs.pipeline_diameter }}">{{ .Params.key_specs.pipeline_diameter }}</option>
+                {{ end }}
+              {{ end }}
+            </select>
+          </div>
+          <div class="filter-group">
+            <label for="camera_resolution">摄像头像素</label>
+            <select name="camera_resolution" id="camera_resolution">
+              <option value="">全部</option>
+              {{ range .Site.Pages }}
+                {{ if eq .Type "products" }}
+                  <option value="{{ .Params.key_specs.camera_resolution }}">{{ .Params.key_specs.camera_resolution }}</option>
+                {{ end }}
+              {{ end }}
+            </select>
+          </div>
+          <div class="filter-group">
+            <label for="view_direction">镜头视向</label>
+            <select name="view_direction" id="view_direction">
+              <option value="">全部</option>
+              {{ range .Site.Pages }}
+                {{ if eq .Type "products" }}
+                  <option value="{{ .Params.key_specs.view_direction }}">{{ .Params.key_specs.view_direction }}</option>
+                {{ end }}
+              {{ end }}
+            </select>
+          </div>
+           <div class="filter-group">
+            <label for="light_source">光源类型</label>
+            <select name="light_source" id="light_source">
+              <option value="">全部</option>
+              {{ range .Site.Pages }}
+                {{ if eq .Type "products" }}
+                  <option value="{{ .Params.key_specs.light_source }}">{{ .Params.key_specs.light_source }}</option>
+                {{ end }}
+              {{ end }}
+            </select>
+          </div>
+          <div class="filter-group">
+            <label for="guide_direction">镜头导向</label>
+            <select name="guide_direction" id="guide_direction">
+              <option value="">全部</option>
+              {{ range .Site.Pages }}
+                {{ if eq .Type "products" }}
+                  <option value="{{ .Params.key_specs.guide_direction }}">{{ .Params.key_specs.guide_direction }}</option>
+                {{ end }}
+              {{ end }}
+            </select>
+          </div>
+          <div class="filter-group">
+            <label for="pipeline_material">管线材质</label>
+            <select name="pipeline_material" id="pipeline_material">
+              <option value="">全部</option>
+              {{ range .Site.Pages }}
+                {{ if eq .Type "products" }}
+                  <option value="{{ .Params.key_specs.pipeline_material }}">{{ .Params.key_specs.pipeline_material }}</option>
+                {{ end }}
+              {{ end }}
+            </select>
+          </div>
+        </div>
+      </div>
+       <button type="submit" class="filter-button">筛选</button>
+    </form>
+  </div>
+
+  <!-- 产品数量显示 -->
+  <div class="product-count">
+    找到 {{ len .Pages }} 个产品，显示第 1-{{ len .Pages }} 个
+  </div>
+
+  <!-- 产品列表 -->
+  <div class="products-grid">
+    {{ range .Pages }}
+    <div class="product-card">
+      <div class="product-image">
+        <img src="{{ (index .Params.images 0).image }}" alt="{{ .Title }}" onerror="this.src='https://picsum.photos/400/300'">
+      </div>
+      <div class="product-info">
+        <h3>{{ .Title }}</h3>
+        <p class="model">型号：{{ .Params.model }}</p>
+        <p class="series">系列：{{ .Params.series }}</p>
+        <p class="supplier">供应商：{{ .Params.supplier }}</p>
+        <div class="key-specs">
+          <h4>关键参数</h4>
+          <ul>
+            <li>屏幕尺寸：{{ .Params.key_specs.screen_size }}</li>
+            <li>管线直径：{{ .Params.key_specs.pipeline_diameter }}</li>
+            <li>摄像头分辨率：{{ .Params.key_specs.camera_resolution }}</li>
+            <li>视角方向：{{ .Params.key_specs.view_direction }}</li>
+            <li>导向方向：{{ .Params.key_specs.guide_direction }}</li>
+          </ul>
+        </div>
+        <a href="{{ .RelPermalink }}" class="view-details">查看详情</a>
+      </div>
+    </div>
+    {{ end }}
+  </div>
+</div>
+{{ end }} 

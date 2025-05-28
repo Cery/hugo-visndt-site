@@ -1,26 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>首页 on hugo-visndt-site</title>
-    <link>http://localhost:1313/</link>
-    <description>Recent content in 首页 on hugo-visndt-site</description>
+    <title>产品中心 on hugo-visndt-site</title>
+    <link>http://localhost:1313/products/</link>
+    <description>Recent content in 产品中心 on hugo-visndt-site</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title></title>
-      <link>http://localhost:1313/suppliers/supplier1/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/suppliers/supplier1/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title></title>
-      <link>http://localhost:1313/suppliers/supplier2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/suppliers/supplier2/</guid>
-      <description></description>
-    </item>
+    <atom:link href="http://localhost:1313/products/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>专业工业内窥镜 VX-3000</title>
       <link>http://localhost:1313/products/product3/</link>

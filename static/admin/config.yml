@@ -6,21 +6,50 @@ media_folder: "static/images/uploads"
 public_folder: "/images/uploads"
 
 collections:
-  - name: "posts"
-    label: "文章"
-    folder: "content/posts"
+  - name: "suppliers"
+    label: "供应商"
+    folder: "content/suppliers"
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    slug: "{{slug}}"
     fields:
-      - {label: "标题", name: "title", widget: "string"}
-      - {label: "发布时间", name: "date", widget: "datetime"}
-      - {label: "内容", name: "body", widget: "markdown"}
+      - {label: "企业名称", name: "name", widget: "string"}
+      - {label: "企业类型", name: "type", widget: "select", options: ["制造商", "贸易商"]}
+      - {label: "企业地址", name: "address", widget: "string"}
+      - {label: "产品系列", name: "series", widget: "list", fields: [{label: "系列名称", name: "series_name", widget: "string"}]}
+      - {label: "企业相册", name: "gallery", widget: "list", fields: [{label: "图片", name: "image", widget: "image"}]}
+      - {label: "联系人", name: "contact", widget: "object", fields: [
+          {label: "姓名", name: "name", widget: "string"},
+          {label: "职位", name: "position", widget: "string"},
+          {label: "电话", name: "phone", widget: "string"},
+          {label: "邮箱", name: "email", widget: "string"}
+        ]}
+      - {label: "公司简介", name: "description", widget: "text"}
+
   - name: "products"
     label: "产品"
     folder: "content/products"
     create: true
     slug: "{{slug}}"
     fields:
-      - {label: "标题", name: "title", widget: "string"}
-      - {label: "图片", name: "image", widget: "image"}
-      - {label: "描述", name: "body", widget: "markdown"} 
+      - {label: "产品标题", name: "title", widget: "string"}
+      - {label: "产品型号", name: "model", widget: "string"}
+      - {label: "供应商", name: "supplier", widget: "relation", collection: "suppliers", value_field: "name", search_fields: ["name"]}
+      - {label: "产品系列", name: "series", widget: "string"}
+      - {label: "关键参数", name: "key_specs", widget: "object", fields: [
+          {label: "主机屏幕", name: "screen_size", widget: "select", options: ["3.5寸", "4.3寸", "5.6寸", "7寸"]},
+          {label: "管线直径", name: "pipeline_diameter", widget: "select", options: ["6mm", "8mm", "10mm", "12mm"]},
+          {label: "像素", name: "camera_resolution", widget: "select", options: ["720P", "1080P", "2K", "4K"]},
+          {label: "视向", name: "view_direction", widget: "select", options: ["直视", "侧视", "斜视"]},
+          {label: "导向", name: "guide_direction", widget: "select", options: ["单向", "双向", "四向"]},
+          {label: "光源类型", name: "light_source", widget: "select", options: ["LED", "卤素灯", "氙气灯"]},
+          {label: "管线材质", name: "pipeline_material", widget: "select", options: ["不锈钢", "钨丝", "钛合金"]},
+          {label: "景深", name: "depth_of_field", widget: "string"},
+          {label: "视场角度", name: "view_angle", widget: "string"},
+          {label: "防护等级", name: "protection_level", widget: "string"},
+          {label: "工作温度", name: "working_temp", widget: "string"},
+          {label: "待机时长", name: "standby_time", widget: "string"}
+        ]}
+      - {label: "产品图片", name: "images", widget: "list", fields: [{label: "图片", name: "image", widget: "image"}]}
+      - {label: "详细介绍", name: "description", widget: "markdown"}
+      - {label: "规格参数", name: "specifications", widget: "markdown"}
+      - {label: "资料下载", name: "downloads", widget: "list", fields: [{label: "文件", name: "file", widget: "file"}]} 
