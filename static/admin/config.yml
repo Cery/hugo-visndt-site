@@ -12,6 +12,7 @@ collections:
     create: true
     slug: "{{slug}}"
     fields:
+      - {label: "Slug (用于文件名和URL)", name: "slug", widget: "string"}
       - {label: "企业名称", name: "name", widget: "string"}
       - {label: "企业类型", name: "type", widget: "select", options: ["制造商", "贸易商"]}
       - {label: "企业地址", name: "address", widget: "string"}
@@ -31,6 +32,7 @@ collections:
     create: true
     slug: "{{slug}}"
     fields:
+      - {label: "Slug (用于文件名和URL)", name: "slug", widget: "string"}
       - {label: "产品标题", name: "title", widget: "string"}
       - {label: "产品型号", name: "model", widget: "string"}
       - {label: "供应商", name: "supplier", widget: "relation", collection: "suppliers", value_field: "name", search_fields: ["name"]}

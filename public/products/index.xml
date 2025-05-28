@@ -22,6 +22,13 @@
       <description></description>
     </item>
     <item>
+      <title>通过工具创建的测试产品</title>
+      <link>http://localhost:1313/products/test-product-by-tool/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/products/test-product-by-tool/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>高清工业内窥镜 VH-1000</title>
       <link>http://localhost:1313/products/product1/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

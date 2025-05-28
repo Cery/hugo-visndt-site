@@ -18,6 +18,8 @@
   </url><url>
     <loc>http://localhost:1313/products/product2/</loc>
   </url><url>
+    <loc>http://localhost:1313/products/test-product-by-tool/</loc>
+  </url><url>
     <loc>http://localhost:1313/</loc>
   </url><url>
     <loc>http://localhost:1313/products/product1/</loc>
