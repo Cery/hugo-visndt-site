@@ -1,12 +1,33 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>供应商 on hugo-visndt-site</title>
+    <title>Suppliers on hugo-visndt-site</title>
     <link>http://localhost:1313/suppliers/</link>
-    <description>Recent content in 供应商 on hugo-visndt-site</description>
+    <description>Recent content in Suppliers on hugo-visndt-site</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
     <atom:link href="http://localhost:1313/suppliers/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>http://localhost:1313/suppliers/1231242341324/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/suppliers/1231242341324/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/suppliers/vsndt/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/suppliers/vsndt/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/suppliers/wsndt/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/suppliers/wsndt/</guid>
+      <description></description>
+    </item>
     <item>
       <title></title>
       <link>http://localhost:1313/suppliers/supplier1/</link>

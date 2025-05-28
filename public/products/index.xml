@@ -42,5 +42,12 @@
       <guid>http://localhost:1313/products/product1/</guid>
       <description></description>
     </item>
+    <item>
+      <title>高清工业视频内窥镜</title>
+      <link>http://localhost:1313/products/ws-k2020/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/products/ws-k2020/</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>
