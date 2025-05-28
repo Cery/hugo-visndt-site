@@ -39,13 +39,13 @@ collections:
       - {label: "供应商", name: "supplier", widget: "relation", collection: "suppliers", value_field: "name", search_fields: ["name"]}
       - {label: "产品系列", name: "series", widget: "string"}
       - {label: "关键参数", name: "key_specs", widget: "object", fields: [
-          {label: "主机屏幕", name: "screen_size", widget: "select", options: ["3.5寸", "4.3寸", "5.6寸", "7寸"]},
-          {label: "管线直径", name: "pipeline_diameter", widget: "select", options: ["6mm", "8mm", "10mm", "12mm"]},
+          {label: "主机屏幕", name: "screen_size", widget: "select", options: ["3.5寸", "4.3寸", "5寸","5.7寸", "6寸","7寸"]},
+          {label: "管线直径", name: "pipeline_diameter", widget: "select", options: ["0.85mm","0.95mm","1mm","1.2mm","1.5mm","1.8mm","2.0mm","2.4mm", "3mm", "3.9mm", "5mm", "6mm", "8mm"]},
           {label: "像素", name: "camera_resolution", widget: "select", options: ["720P", "1080P", "2K", "4K"]},
-          {label: "视向", name: "view_direction", widget: "select", options: ["直视", "侧视", "斜视"]},
-          {label: "导向", name: "guide_direction", widget: "select", options: ["单向", "双向", "四向"]},
-          {label: "光源类型", name: "light_source", widget: "select", options: ["LED", "卤素灯", "氙气灯"]},
-          {label: "管线材质", name: "pipeline_material", widget: "select", options: ["不锈钢", "钨丝", "钛合金"]},
+          {label: "视向", name: "view_direction", widget: "select", options: ["直视", "侧视", "直侧一体双视", "斜视"]},
+          {label: "导向", name: "guide_direction", widget: "select", options: ["无导向", "180度两方向", "360度四方向"]},
+          {label: "光源类型", name: "light_source", widget: "select", options: ["LED", "光纤传导"]},
+          {label: "管线材质", name: "pipeline_material", widget: "select", options: ["不锈钢丝编织软管", "钨丝编织软管","合金弹簧软管","钛合金硬杆"]},
           {label: "景深", name: "depth_of_field", widget: "string"},
           {label: "视场角度", name: "view_angle", widget: "string"},
           {label: "防护等级", name: "protection_level", widget: "string"},
