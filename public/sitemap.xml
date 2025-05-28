@@ -10,6 +10,8 @@
   </url><url>
     <loc>http://localhost:1313/tags/</loc>
   </url><url>
+    <loc>http://localhost:1313/products/%E4%B8%89%E7%BB%B4%E6%B5%8B%E9%87%8F/</loc>
+  </url><url>
     <loc>http://localhost:1313/products/product3/</loc>
   </url><url>
     <loc>http://localhost:1313/products/</loc>
