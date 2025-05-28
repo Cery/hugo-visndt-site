@@ -1,5 +1,5 @@
 ---
-slug: test-02
+slug: test-002
 name: 广州视安特贸易有限公司
 type: 贸易商
 address: 广州市天河区珠江新城
